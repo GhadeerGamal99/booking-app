@@ -1,0 +1,105 @@
+@use '../../../../../styles.scss' as *;
+
+i{
+    color: $primary-color;
+}
+.content-wrapper{
+    background: white;
+    border-radius: 20px;
+    border: 2px solid #d7d6d68a;
+    
+}
+
+// .item{
+//     padding: 15px;
+// }
+.advantage-section{
+    line-height: 26px;
+    i{
+        font-size: 13px;
+        font-weight: 500;
+    }
+}
+.cancellation-date{
+    p{
+        color: $primary-color;
+        margin-left: 21px;
+    }
+}
+
+.rent-section{
+    p{
+        font-size: 26px;
+        font-weight: 800;
+    }
+    .rent-night{
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.rent-notes{
+    p{
+        color: $secondary-color;
+        font-size: 17px;
+    }
+
+}
+.form-select::after { 
+    content: none; 
+} 
+.form-select {
+    padding-right: 2.5rem; /* Add space for custom arrow */
+    background-color: white; /* Ensures no default styling */
+    border: 1px solid $secondary-color;
+    height: 38px; /* Adjust as needed */
+    outline: none;
+    background-image: unset;
+}
+
+/* Optional: Custom arrow */
+.form-select-wrapper {
+    position: relative;
+}
+
+.form-select-wrapper::after {
+    content: "\f107"; /* FontAwesome caret-down */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 12px;
+    top: 50%; /* Aligns based on select field */
+    transform: translateY(-50%); /* Centers it vertically */
+    color: #8C3A87; /* Custom arrow color */
+    pointer-events: none; /* Disable interaction */
+}
+.form-select:focus {
+    border-color:$secondary-color;
+    outline: none;
+    box-shadow: none;
+}
+.residents-count{
+    i{
+        font-size: 25px;
+    }
+    span{
+        color: $secondary-color;
+        font-size: 25px;
+    }
+}
+
+@include respond-to(small) {
+    .border-r-grey{
+        border-right: 2px solid #d7d6d600;
+    }
+  }
+@include respond-to(medium) {
+    .border-r-grey{
+        border-right: 2px solid #d7d6d600;
+    }
+  }
+@include respond-to(large) {
+    .border-r-grey{
+        border-right: 2px solid #d7d6d68a;
+    }
+  }

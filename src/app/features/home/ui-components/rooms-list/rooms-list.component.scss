@@ -1,0 +1,15 @@
+@use '../../../../../styles.scss' as *;
+.list-rooms-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.rooms-selected{
+    font-size: 16px;
+    font-weight: 600;
+    background-color: $primary-color;
+    color: white;
+    width: fit-content;
+    padding: 11px 35px;
+    border-radius: 15px;
+}

@@ -1,0 +1,89 @@
+@use '../../../../../styles.scss' as *;
+
+.carousel{
+    max-width: 600px;
+    width: 100%;
+}
+.carousel-indicators{
+    button{
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+    }
+}
+img{
+    border-radius: 40px;
+}
+.room-ads-wrapper{
+    position: relative;
+}
+
+.ads-title{
+    font-weight: 700;
+}
+@mixin ads-content{
+    background-color:$accent-color;
+    width: 100%;
+
+    line-height: 26px;
+    i{
+        color: $primary-color;
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+}
+
+.room-ads-details{
+    p{
+        color: #000000cc;
+        margin-bottom: 7px;
+    }
+}
+
+@include respond-to(small) {
+    .ads-content-responsive{
+        @include ads-content;
+        position: relative;
+        border-radius: 20px;
+        padding: 14px 10px 10px 10px;
+        margin: 16px 0px;
+    }
+  }
+@include respond-to(x-small) {
+    .ads-content-responsive{
+        @include ads-content;
+        position: relative;
+        border-radius: 20px;
+        padding: 14px 10px 10px 10px;
+        margin: 16px 0px;
+    }
+  }
+
+  @include respond-to(medium) {
+    .ads-content-responsive{
+        @include ads-content;
+        position: relative;
+        border-radius: 20px;
+        padding: 14px 10px 10px 10px;
+        margin: 16px 0px;
+    }
+  }
+
+  @include respond-to(large) {
+    .ads-content-responsive{
+        @include ads-content;
+        position: absolute;
+        // top: 212px;
+        top:80%;
+        left: 0;
+        z-index: -1;
+        padding: 48px 10px 10px 10px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+  }
+
+//   @include respond-to(large) {
+//     background-color: green;
+//   }
