@@ -28,7 +28,6 @@
         </div>
         <span>+</span>
         <div class="child-count d-flex gap-1">
-          <!-- <i class="fa-solid fa-user"></i> -->
           <i *ngFor="let _ of childArray" class="fa-solid fa-user"></i>
         </div>
       </div>
@@ -43,18 +42,14 @@
       </div>
     </div>
     <div class="col-12 col-md-2 px-3 pb-3 px-sm-3 pb-sm-3 p-md-3">
-        <div class="form-select-wrapper">
-      <select
-        class="form-select"
-        aria-label="Select amount"
-        [value]="room.roomSelectedCount"
-      >
-        <option selected>Select amount</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-    </div>
+      <div class="form-select-wrapper">
+        <select class="form-select" aria-label="Select amount" [value]="room.roomSelectedCount">
+          <option selected>Select amount</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
     </div>
   </div>
 </div>

@@ -3,40 +3,45 @@
 @use '../../../../../styles.scss' as *;
 
 
-.room-ads-wrapper{
+.room-ads-wrapper {
     position: relative;
 }
-.room-ads-details{
-    p{
+
+.room-ads-details {
+    p {
         color: #000000cc;
         margin-bottom: 7px;
     }
 }
-.carousel{
+
+.carousel {
     max-width: 600px;
     width: 100%;
-    img{
+
+    img {
         border-radius: 40px;
     }
 }
-.carousel-indicators{
-    button{
+
+.carousel-indicators {
+    button {
         width: 5px;
         height: 5px;
         border-radius: 50%;
     }
 }
 
-.ads-title{
+.ads-title {
     font-weight: 700;
 }
 
-@mixin ads-content{
-    background-color:$accent-color;
+@mixin ads-content {
+    background-color: $accent-color;
     width: 100%;
 
     line-height: 26px;
-    i{
+
+    i {
         color: $primary-color;
         font-size: 13px;
         font-weight: 500;
@@ -44,22 +49,22 @@
 
 }
 
-.ads-content-responsive{
+.ads-content-responsive {
     @include ads-content;
     position: relative;
     border-radius: 20px;
     padding: 14px 10px 10px 10px;
     margin: 16px 0px;
 }
-  @include respond-to(large) {
-    .ads-content-responsive{
+
+@include respond-to(large) {
+    .ads-content-responsive {
         position: absolute;
-        top:80%;
+        top: 80%;
         left: 0;
         z-index: -1;
         padding: 48px 10px 10px 10px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
     }
-  }
-
+}
