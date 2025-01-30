@@ -1,3 +1,5 @@
+@use '../../../../../styles/variables' as *;
+@use '../../../../../styles/mixins' as *;
 @use '../../../../../styles.scss' as *;
 
 .carousel{
@@ -84,6 +86,3 @@ img{
     }
   }
 
-//   @include respond-to(large) {
-//     background-color: green;
-//   }

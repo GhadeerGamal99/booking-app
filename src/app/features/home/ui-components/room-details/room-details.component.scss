@@ -1,4 +1,6 @@
 @use '../../../../../styles.scss' as *;
+@use '../../../../../styles/mixins' as *;
+@use '../../../../../styles/variables' as *;
 
 i{
     color: $primary-color;
@@ -10,9 +12,6 @@ i{
     
 }
 
-// .item{
-//     padding: 15px;
-// }
 .advantage-section{
     line-height: 26px;
     i{

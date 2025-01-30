@@ -31,8 +31,15 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/styles/_mixins.scss",
+              "src/styles/_variables.scss",
               "src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles"
+              ]
+            },
             "scripts": [
               "node_modules/@popperjs/core/dist/umd/popper.min.js", 
               "node_modules/bootstrap/dist/js/bootstrap.min.js" 

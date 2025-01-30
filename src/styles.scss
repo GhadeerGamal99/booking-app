@@ -1,33 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
+@use 'styles/variables' as *;
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
-
-// Color variables
-$primary-color: #8C3A87;
-$secondary-color: #0ABFAD;
-$accent-color: #D6F6FA;
-$background-color: #FAFAFA;
-$text-color: #25283D;
-
-// Font variables
-$primary-font: 'Roboto', sans-serif;
-
-// Mixin for media query
-@mixin respond-to($breakpoint) {
-  @if $breakpoint == small {
-    @media (max-width: 576px) { @content; }
-  }
-  @else if $breakpoint == x-small {
-    @media (min-width: 577px) and (max-width: 768px) { @content; }
-  }
-  @else if $breakpoint == medium {
-    @media (min-width: 769px) { @content; }
-  }
-  @else if $breakpoint == large {
-    @media (min-width: 1024px) { @content; }
-  }
-}
 // Global Styles
 body {
   font-family: $primary-font;
