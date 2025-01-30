@@ -44,39 +44,7 @@ i{
     }
 
 }
-.form-select::after { 
-    content: none; 
-} 
-.form-select {
-    padding-right: 2.5rem; /* Add space for custom arrow */
-    background-color: white; /* Ensures no default styling */
-    border: 1px solid $secondary-color;
-    height: 38px; /* Adjust as needed */
-    outline: none;
-    background-image: unset;
-}
 
-/* Optional: Custom arrow */
-.form-select-wrapper {
-    position: relative;
-}
-
-.form-select-wrapper::after {
-    content: "\f107"; /* FontAwesome caret-down */
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    position: absolute;
-    right: 12px;
-    top: 50%; /* Aligns based on select field */
-    transform: translateY(-50%); /* Centers it vertically */
-    color: #8C3A87; /* Custom arrow color */
-    pointer-events: none; /* Disable interaction */
-}
-.form-select:focus {
-    border-color:$secondary-color;
-    outline: none;
-    box-shadow: none;
-}
 .residents-count{
     i{
         font-size: 25px;
@@ -86,19 +54,48 @@ i{
         font-size: 25px;
     }
 }
+.form-select {
+    padding-right: 2.5rem; /* Add space for custom arrow */
+    background-color: white; /* Ensures no default styling */
+    border: 1px solid $secondary-color;
+    height: 38px;
+    outline: none;
+    background-image: unset;
+    &:focus {
+        border-color:$secondary-color;
+        outline: none;
+        box-shadow: none;
+    }
+    &:after { 
+        content: none; 
+    } 
+}
 
-@include respond-to(small) {
-    .border-r-grey{
-        border-right: 2px solid #d7d6d600;
+/* Optional: Custom arrow */
+.form-select-wrapper {
+    position: relative;
+    &:after {
+        content: "\f107"; /* FontAwesome caret-down */
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        position: absolute;
+        right: 12px;
+        top: 50%; /* Aligns based on select field */
+        transform: translateY(-50%); /* Centers it vertically */
+        color: #8C3A87; /* Custom arrow color */
+        pointer-events: none; /* Disable interaction */
     }
-  }
-@include respond-to(medium) {
-    .border-r-grey{
-        border-right: 2px solid #d7d6d600;
-    }
-  }
+}
+
+$border-color: #d7d6d600; // Default border color for small and medium sizes
+$large-border-color: #d7d6d68a; // Border color for large sizes
+
+.border-r-grey {
+  border-right: 2px solid $border-color;
+}
+
 @include respond-to(large) {
-    .border-r-grey{
-        border-right: 2px solid #d7d6d68a;
-    }
+  .border-r-grey {
+    border-right: 2px solid $large-border-color;
   }
+}
