@@ -53,7 +53,6 @@
 }
   @include respond-to(large) {
     .ads-content-responsive{
-        @include ads-content;
         position: absolute;
         top:80%;
         left: 0;
