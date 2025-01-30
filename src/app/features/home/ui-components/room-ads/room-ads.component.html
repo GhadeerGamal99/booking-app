@@ -1,55 +1,42 @@
 <div class="room-ads-wrapper">
     <div class="room-ads-details">
-        <p>2 Types, 6 Rooms</p>
+        <p>{{ roomAdsData.roomType }} Types, {{ roomAdsData.roomCount }} Rooms</p>
     </div>
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                aria-label="Slide 3"></button>
+          <button *ngFor="let img of roomAdsData.roomImg; let i = index"
+                  type="button"
+                  [attr.data-bs-target]="'#carouselExampleIndicators'"
+                  [attr.data-bs-slide-to]="i"
+                  [class.active]="i === 0"
+                  [attr.aria-label]="'Slide ' + (i + 1)">
+          </button>
         </div>
+      
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="assets/images/room_1.jpg" class="d-block w-100" alt="first-room" />
-            </div>
-            <div class="carousel-item">
-                <img src="assets/images/room_2.png" class="d-block w-100" alt="second-room" />
-            </div>
-            <div class="carousel-item">
-                <img src="assets/images/room_3.jpg" class="d-block w-100" alt="third-room" />
-            </div>
+          <div *ngFor="let img of roomAdsData.roomImg; let i = index"
+               class="carousel-item"
+               [class.active]="i === 0">
+            <img [src]="img" class="d-block w-100" alt="room-img-{{i}}" />
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
+      
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
-    </div>
+      </div>
+      
     <div class="d-flex flex-column ads-content-responsive">
-     <h5 class="ads-title">Premium Room Sea View</h5>
+     <h5 class="ads-title">{{ roomAdsData.roomName }}</h5>
      <ul>
-        <li class="d-flex align-items-center gap-1"><i class="fa-solid fa-star"></i>
-            <p>Balcony</p>
-        </li>
-        <li class="d-flex align-items-center gap-1"><i class="fa-solid fa-star"></i>
-            <p>Free WIFI</p>
-        </li>
-        <li class="d-flex align-items-center gap-1"><i class="fa-solid fa-star"></i>
-            <p>2 Beds</p>
-        </li>
-        <li class="d-flex align-items-center gap-1"><i class="fa-solid fa-star"></i>
-            <p>Air Conditioning</p>
-        </li>
-        <li class="d-flex align-items-center gap-1"><i class="fa-solid fa-star"></i>
-            <p>Hair Dryer</p>
+        <li *ngFor="let item of roomAdsData.roomContents" class="d-flex align-items-center gap-1"><i class="fa-solid fa-star"></i>
+            <p>{{ item }}</p>
         </li>
      </ul>
     </div>
