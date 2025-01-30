@@ -44,36 +44,13 @@
 
 }
 
-@include respond-to(small) {
-    .ads-content-responsive{
-        @include ads-content;
-        position: relative;
-        border-radius: 20px;
-        padding: 14px 10px 10px 10px;
-        margin: 16px 0px;
-    }
-  }
-  
-@include respond-to(x-small) {
-    .ads-content-responsive{
-        @include ads-content;
-        position: relative;
-        border-radius: 20px;
-        padding: 14px 10px 10px 10px;
-        margin: 16px 0px;
-    }
-  }
-
-  @include respond-to(medium) {
-    .ads-content-responsive{
-        @include ads-content;
-        position: relative;
-        border-radius: 20px;
-        padding: 14px 10px 10px 10px;
-        margin: 16px 0px;
-    }
-  }
-
+.ads-content-responsive{
+    @include ads-content;
+    position: relative;
+    border-radius: 20px;
+    padding: 14px 10px 10px 10px;
+    margin: 16px 0px;
+}
   @include respond-to(large) {
     .ads-content-responsive{
         @include ads-content;
